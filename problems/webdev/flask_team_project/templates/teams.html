@@ -6,10 +6,11 @@
         Team:  {{loop.index}}
       </tr>
         <table>
-          {%for name, line in team.items() %}
-          <tr> <td>{{name}}</td> <td> <!-- Feature 4 --> </td>  </tr>
+          {%for name, line in team[0].items() %}
+          <tr> <td>{{name}}</td> <td> {{ line }} </td>  </tr>
           {%endfor%}
-        </table
+        </table>
+        <tr><td> Total Lines:{{ team[1] }} </td></tr> <br><br>
     {%endfor%}
   </table>
   </body>
